@@ -1,79 +1,217 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Réalisations - AITNASS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations - AITNASS</title>
 
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#0a0f1f;
-color:white;
-margin:0;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-nav{
-background:#111;
-padding:15px;
-text-align:center;
-}
+        body {
+            background: #0a0f1f;
+            color: white;
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-}
+        /* Barre de navigation moderne (identique aux autres pages) */
+        nav {
+            background: #000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.2);
+        }
 
-h1{
-text-align:center;
-padding:20px;
-color:#00aaff;
-}
+        nav .logo-nav {
+            max-height: 40px;
+            width: auto;
+        }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-padding:20px;
-}
+        nav .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-.gallery img{
-width:100%;
-border-radius:10px;
-}
+        nav .nav-links a:hover {
+            color: #00aaff;
+        }
 
-.card{
-background:#131b31;
-padding:15px;
-border-radius:10px;
-}
-</style>
+        /* Titre de la page */
+        h1 {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+            color: #00aaff;
+            font-size: 36px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #a0aec0;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        /* Galerie de réalisations */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        /* Fiche Projet (Card) */
+        .card {
+            background: #111726;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden; /* Pour que le zoom de l'image ne dépasse pas de la carte */
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 170, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 170, 255, 0.15);
+        }
+
+        /* Conteneur de l'image pour gérer l'effet de zoom */
+        .img-container {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            background: #18223c;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Permet de cadrer proprement l'image sans la déformer */
+            transition: transform 0.5s ease, filter 0.3s ease;
+            filter: brightness(0.9);
+        }
+
+        .card:hover img {
+            transform: scale(1.08); /* Effet zoom moderne */
+            filter: brightness(1.1);
+        }
+
+        /* Contenu textuel de la carte */
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            color: #00aaff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #b0b8c9;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Bouton WhatsApp Flottant */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* Adaptation mobile */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav .nav-links a {
+                margin: 0 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<a href="index.html">Accueil</a>
-<a href="realisations.html">Réalisations</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <!-- Barre de Navigation -->
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="AITNASS" class="logo-nav">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-<h1>Nos Réalisations</h1>
+    <h1>Nos Réalisations</h1>
+    <p class="subtitle">Découvrez en images la qualité de nos interventions et de nos infrastructures réseaux.</p>
 
-<div class="gallery">
+    <!-- Grille des réalisations -->
+    <div class="gallery">
 
-<div class="card">
-<img src="realisation1.jpg">
-<p>Installation et configuration d'une baie réseau professionnelle.</p>
-</div>
+        <!-- Projet 1 -->
+        <div class="card">
+            <div class="img-container">
+                <img src="realisation1.jpg" alt="Baie Réseau AITNASS">
+            </div>
+            <div class="card-content">
+                <h3>Infrastructure & Baie Réseau</h3>
+                <p>Installation, brassage et configuration complète d'une baie réseau professionnelle pour l'optimisation des flux de données en entreprise.</p>
+            </div>
+        </div>
 
-<div class="card">
-<img src="realisation2.jpg">
-<p>Travaux de câblage et intégration d'infrastructure informatique.</p>
-</div>
+        <!-- Projet 2 -->
+        <div class="card">
+            <div class="img-container">
+                <img src="realisation2.jpg" alt="Câblage Structuré AITNASS">
+            </div>
+            <div class="card-content">
+                <h3>Câblage & Intégration</h3>
+                <p>Travaux de déploiement d'un câblage structuré informatique et intégration d'équipements réseaux pour assurer une connectivité maximale.</p>
+            </div>
+        </div>
 
-</div>
+    </div>
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/22677066732" class="whatsapp-float" target="_blank">
+        💬 Discuter sur WhatsApp
+    </a>
 
 </body>
 </html>
