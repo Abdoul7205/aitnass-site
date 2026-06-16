@@ -1,163 +1,287 @@
 <!DOCTYPE html><html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AITNASS - Abdoul IT Network and System Services</title><style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITNASS - Abdoul IT Network and System Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-body{
-background:#0a0f1f;
-color:white;
-}
+        body {
+            background: #0a0f1f;
+            color: white;
+        }
 
-header{
-background:#000;
-padding:20px;
-text-align:center;
-}
+        /* Barre de navigation moderne avec logo intégré */
+        nav {
+            background: #000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.2);
+        }
 
-header h1{
-color:#00aaff;
-font-size:40px;
-}
+        nav .logo-nav {
+            max-height: 40px;
+            width: auto;
+        }
 
-header p{
-color:#ddd;
-}
+        nav .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-.hero{
-padding:60px 20px;
-text-align:center;
-}
+        nav .nav-links a:hover {
+            color: #00aaff;
+        }
 
-.hero h2{
-font-size:32px;
-margin-bottom:20px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, #131b31 0%, #0a0f1f 100%);
+        }
 
-.hero p{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-}
+        .hero h1 {
+            font-size: 45px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 25px;
-background:#00aaff;
-color:white;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-}
+        .hero h2 {
+            font-size: 24px;
+            color: #ddd;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
 
-.services{
-padding:50px 20px;
-text-align:center;
-}
+        .hero p {
+            max-width: 800px;
+            margin: 25px auto;
+            line-height: 1.8;
+            color: #b0b8c9;
+        }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
-}
+        /* Bouton d'action */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.4);
+        }
 
-.card{
-background:#131b31;
-padding:20px;
-border-radius:10px;
-}
+        .btn:hover {
+            background: #0088cc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 170, 255, 0.6);
+        }
 
-footer{
-background:#000;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-</style></head><body><nav style="background:#111;padding:15px;text-align:center;">
-<a href="index.html" style="color:white;margin:15px;text-decoration:none;">Accueil</a>
-<a href="realisations.html" style="color:white;margin:15px;text-decoration:none;">Réalisations</a>
-<a href="contact.html" style="color:white;margin:15px;text-decoration:none;">Contact</a>
-</nav><header>
-<img src="logo.png" alt="Logo AITNASS" style="max-width:250px;width:100%;">
+        /* Sections standards */
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
 
-<h1>AITNASS</h1>
-<p>Abdoul IT Network and System Services</p>
-</header><section class="hero">
-<section class="hero"><h2 style="font-size:45px;color:#00aaff;">
-AITNASS
-</h2><h3 style="margin-top:15px;">
-Solutions Réseaux, Systèmes et Sécurité Électronique
-</h3><p style="max-width:900px;margin:25px auto;line-height:1.8;">
-Nous accompagnons les entreprises, administrations et particuliers dans
-la conception, l'installation et la maintenance de solutions informatiques
-modernes : réseaux informatiques, téléphonie IP, vidéosurveillance,
-contrôle d'accès et infrastructures numériques.
-</p><a class="btn" href="https://wa.me/22677066732">
-📱 Demander un devis gratuit
-</a></section><section style="padding:60px 20px;background:#131b31;text-align:center;"><h2 style="color:#00aaff;">Pourquoi choisir AITNASS ?</h2><div class="service-grid"><div class="card">
-<h3>⚡ Intervention Rapide</h3>
-<p>Assistance et dépannage rapides pour limiter les interruptions de service.</p>
-</div><div class="card">
-<h3>🔒 Sécurité</h3>
-<p>Solutions de vidéosurveillance et contrôle d'accès adaptées à vos besoins.</p>
-</div><div class="card">
-<h3>🌐 Expertise Réseau</h3>
-<p>Installation et optimisation de réseaux informatiques professionnels.</p>
-</div><div class="card">
-<h3>🛠 Maintenance</h3>
-<p>Suivi et maintenance préventive de vos équipements informatiques.</p>
-</div></div></section><section style="padding:60px 20px;text-align:center;"><h2 style="color:#00aaff;">Nos domaines d'expertise</h2><div class="service-grid"><div class="card">
-<h3>💻 Réseaux Informatiques</h3>
-</div><div class="card">
-<h3>📞 Téléphonie IP & Analogique</h3>
-</div><div class="card">
-<h3>📹 Vidéosurveillance</h3>
-</div><div class="card">
-<h3>🚪 Contrôle d'Accès</h3>
-</div><div class="card">
-<h3>🖥 Vente de Matériel Informatique</h3>
-</div><div class="card">
-<h3>🔧 Maintenance & Support</h3>
-</div></div></section>
-</section><section class="services">
-<h2>Nos Services</h2><div class="service-grid"><div class="card">
-<h3>Réseaux Informatiques</h3>
-<p>Installation, câblage et maintenance réseau.</p>
-</div><div class="card">
-<h3>Téléphonie IP</h3>
-<p>Solutions téléphoniques IP et analogiques.</p>
-</div><div class="card">
-<h3>Vidéosurveillance</h3>
-<p>Installation de caméras et accès à distance.</p>
-</div><div class="card">
-<h3>Contrôle d'Accès</h3>
-<p>Sécurisation des accès professionnels.</p>
-</div></div>
-</section><footer>
-📍 Ouagadougou, Burkina Faso<br>
-📞 +226 77 06 67 32 | +226 72 61 05 21<br>
-📧 aitnass.services@gmail.com
-</footer><a href="https://wa.me/22677066732"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 0 10px rgba(0,0,0,.3);
-z-index:1000;">
-💬 WhatsApp
-</a></body>
+        .bg-dark {
+            background: #111726;
+        }
+
+        section h2 {
+            color: #00aaff;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        /* Grilles et Cartes */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: #18223c;
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 170, 255, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .card p {
+            color: #a0aec0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Pied de page */
+        footer {
+            background: #000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 2;
+            color: #ccc;
+        }
+
+        /* Bouton WhatsApp Flottant */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* Rendre le menu responsive sur petits écrans */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav .nav-links a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de Navigation avec ton logo inclus dedans -->
+    <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="AITNASS" class="logo-nav">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Zone de Présentation principale (Hero) -->
+    <header class="hero">
+        <h1>AITNASS</h1>
+        <h2>Solutions Réseaux, Systèmes et Sécurité Électronique</h2>
+        <p>
+            Nous accompagnons les entreprises, administrations et particuliers dans
+            la conception, l'installation et la maintenance de solutions informatiques
+            modernes : réseaux informatiques, téléphonie IP, vidéosurveillance,
+            contrôle d'accès et infrastructures numériques.
+        </p>
+        <a class="btn" href="https://wa.me/22677066732">
+            📱 Demander un devis gratuit
+        </a>
+    </header>
+
+    <!-- Section Pourquoi Nous Choisir -->
+    <section class="bg-dark">
+        <h2>Pourquoi choisir AITNASS ?</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>⚡ Intervention Rapide</h3>
+                <p>Assistance et dépannage rapides pour limiter les interruptions de service au maximum.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 Sécurité Garantie</h3>
+                <p>Solutions de vidéosurveillance et contrôle d'accès de dernière génération adaptées à vos besoins.</p>
+            </div>
+            <div class="card">
+                <h3>🌐 Expertise Réseau</h3>
+                <p>Installation, configuration et optimisation de réseaux informatiques professionnels performants.</p>
+            </div>
+            <div class="card">
+                <h3>🛠 Maintenance Suivie</h3>
+                <p>Suivi régulier et maintenance préventive rigoureuse de l'ensemble de vos équipements informatiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Services & Expertises -->
+    <section>
+        <h2>Nos Domaines d'Expertise</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>💻 Réseaux Informatiques</h3>
+                <p>Installation, audit, câblage structuré et maintenance réseau pour assurer la connectivité de vos équipes.</p>
+            </div>
+            <div class="card">
+                <h3>📞 Téléphonie IP & Analogique</h3>
+                <p>Solutions téléphoniques IP modernes, déploiement de PABX/IPBX pour optimiser vos coûts de communication.</p>
+            </div>
+            <div class="card">
+                <h3>📹 Vidéosurveillance</h3>
+                <p>Installation de caméras intelligentes avec système d'accès à distance sécurisé sur smartphone et PC.</p>
+            </div>
+            <div class="card">
+                <h3>🚪 Contrôle d'Accès</h3>
+                <p>Sécurisation physique de vos locaux par badges, biométrie et gestionnaires d'accès professionnels.</p>
+            </div>
+            <div class="card">
+                <h3>🖥 Vente de Matériel</h3>
+                <p>Fourniture d'équipements informatiques, serveurs, routeurs et ordinateurs de grandes marques adaptés à votre budget.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Maintenance & Support</h3>
+                <p>Contrats de maintenance annuels et assistance technique de niveau 1, 2 et 3 pour vos collaborateurs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        📍 Ouagadougou, Burkina Faso<br>
+        📞 +226 77 06 67 32 | +226 72 61 05 21<br>
+        📧 aitnass.services@gmail.com
+    </footer>
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/22677066732" class="whatsapp-float">
+        💬 Discuter sur WhatsApp
+    </a>
+
+</body>
 </html>
